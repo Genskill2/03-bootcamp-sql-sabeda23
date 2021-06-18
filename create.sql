@@ -1,24 +1,24 @@
-CREATE TABLE Publisher(
+CREATE TABLE publisher(
              id INTEGER primary key,
-             Name text,
-             Country text
+             name text,
+             country text
 );
 
 
-CREATE TABLE Books(
+CREATE TABLE books(
              id INTEGER primary key,
              title text,
              publisher INTEGER REFERENCES Publisher(id)
 );
 
 
-CREATE TABLE Subjects(
+CREATE TABLE subjects(
              id INTEGER primary key,
-             Name text
+             name text
 );
 
 
-CREATE TABLE Books_Subjects(
+CREATE TABLE books_subjects(
              book INTEGER REFERENCES Books(id),
              subject INTEGER REFERENCES Subjects(id)
 );
