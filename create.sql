@@ -1,4 +1,4 @@
-PRAGMA foreign_keys=ON;
+
 
 CREATE TABLE publisher(
              id INTEGER primary key,
