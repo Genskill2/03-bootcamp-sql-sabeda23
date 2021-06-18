@@ -1,3 +1,5 @@
+PRAGMA foreign_keys=ON;
+
 CREATE TABLE publisher(
              id INTEGER primary key,
              name text,
@@ -17,6 +19,6 @@ CREATE TABLE subjects(
              
 CREATE TABLE books_subjects(
              book INTEGER REFERENCES Books(id),
-             subject INTEGER REFERENCES Subjects(id));
+             subject INTEGER REFERENCES Subjects));
 
              
