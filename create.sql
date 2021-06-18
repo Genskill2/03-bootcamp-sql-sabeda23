@@ -9,7 +9,7 @@ CREATE TABLE publisher(
 CREATE TABLE books(
              id INTEGER primary key,
              title text,
-             publisher INTEGER REFERENCES Publisher(id));
+             publisher INTEGER REFERENCES publisher(id));
              
              
 CREATE TABLE subjects(
@@ -18,7 +18,7 @@ CREATE TABLE subjects(
              
              
 CREATE TABLE books_subjects(
-             book INTEGER REFERENCES Books(id),
-             subject INTEGER REFERENCES Subjects);
+             book INTEGER REFERENCES books(id),
+             subject INTEGER REFERENCES subjects);
 
              
